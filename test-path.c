@@ -4,7 +4,7 @@
 /**
  * find_executable_path - find executable path
  *
- * @paths: input
+ * @path: input
  * @command: input
  *
  * Return: char.
