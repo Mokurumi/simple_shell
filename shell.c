@@ -89,7 +89,7 @@ void run_shell(char **av)
 		if (command == NULL)
 			break;
 
-		execute_command(command);
+		execute_command(command, av);
 		free_buf(command);
 
 		if (interactive)
