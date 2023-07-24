@@ -3,8 +3,6 @@
 /**
  * env_main - prints the environment
  *
- * @env: envrionment
- *
  * Return: Always 0.
  */
 int env_main(void)
