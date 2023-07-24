@@ -19,17 +19,11 @@ int handle_command(char **command, char *line)
 		return (1);
 	}
 	else if (_strcmp(*command, builtin_commands[1]) == 0)
-	{
 		return (cd_builtin(command));
-	}
 	else if (_strcmp(*command, builtin_commands[2]) == 0)
-	{
 		return (_setenv(command));
-	}
 	else if (_strcmp(*command, builtin_commands[3]) == 0)
-	{
 		return (_unsetenv(command));
-	}
 	else if (_strcmp(*command, builtin_commands[4]) == 0)
 	{
 		if (command[1] != NULL)
