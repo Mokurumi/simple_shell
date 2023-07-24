@@ -40,8 +40,9 @@ char **read_command(void)
  * execute_command - Execute the given command
  *
  * @command: The command to execute
+ * @av: args array
  */
-void execute_command(char **command)
+void execute_command(char **command, char **av)
 {
 	char *path, **paths, *pathcommand;
 
@@ -66,10 +67,13 @@ void execute_command(char **command)
 
 /**
  * run_shell - The main loop to run the shell
+ *
+ * @av: args array
  */
-void run_shell(void)
+void run_shell(char **av)
 {
 	int interactive = 0;
+	char **command;
 
 	if (isatty(STDIN_FILENO) == 1 && isatty(STDOUT_FILENO) == 1)
 		interactive = 1;
@@ -80,7 +84,7 @@ void run_shell(void)
 
 	while (1)
 	{
-		char **command = read_command();
+		command = read_command();
 
 		if (command == NULL)
 			break;
@@ -112,7 +116,7 @@ int main(int ac, char **av, char *env[])
 	if (ac < 1)
 		return (-1);
 
-	run_shell();
+	run_shell(av);
 
 	return (0);
 }
