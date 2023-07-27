@@ -1,4 +1,3 @@
-#ifndef MAIN_iH
 #define MAIN_H
 
 #include <limits.h>
@@ -12,13 +11,13 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 
-extern char** environ;
+extern char **environ;
 
 char *_strpbrk(char *s, char *accept);
 int _strlen(char *s);
 char *_strtok(char *str, char *delim);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
-char *_getenv(const char* name);
+char *_getenv(const char *name);
 char *_strdup(char *str);
 char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
