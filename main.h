@@ -1,3 +1,4 @@
+#ifndef MAIN_H
 #define MAIN_H
 
 #include <limits.h>
@@ -45,5 +46,11 @@ int _pid(void);
 int _fork(char *command, char **fullCommand);
 int env_main(void);
 int env_environ(int argc, char *argv[], char *env[]);
+
+/* shell functions */
+void print_prompt(void);
+char **read_command(void);
+void execute_command(char **command, char **av);
+void run_shell(char **av);
 
 #endif
